@@ -1,0 +1,6 @@
+{
+  "name": "AetherSphere 3D - The Infinite Dimensions",
+  "description": "An award-winning, interactive 3D web experience built for the 3D Websites Hackathon. Explore multiple immersive realms, procedural shaders, spatial audio, and cinematic camera journeys.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
