@@ -1,0 +1,30 @@
+name: realm-configurator
+description: Calibrates and mutates 3D multiverse world settings and realm configurations in real time.
+input_schema:
+  type: object
+  properties:
+    realm_id:
+      type: string
+      enum: [cyberpunk, celestial, abyss, kinetic, solaris]
+      description: The identifier of the realm to switch to or calibrate.
+    speed:
+      type: number
+      minimum: 0.1
+      maximum: 35.0
+      description: Flight and animation velocity scale.
+    bloom_intensity:
+      type: number
+      minimum: 0.0
+      maximum: 3.0
+      description: Post-processing bloom intensity.
+    distortion:
+      type: number
+      minimum: 0.0
+      maximum: 1.0
+      description: Chromatic aberration and shader wave distortion scale.
+    color_grade:
+      type: string
+      enum: [vibrant, synthwave, emerald, monochrome, celestial]
+      description: Visual color grading profile.
+  required:
+    - realm_id
