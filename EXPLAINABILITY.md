@@ -1,88 +1,91 @@
-# EXPLAINABILITY: aethersphere-3d
+# EXPLAINABILITY — AetherSphere 3D
 
-Comprehensive system explainability, operational mechanics, data provenance, and architectural limitations for the `aethersphere-3d` autonomous agent, compliant with the OpenGAP v0.1.0 specification.
+> **Admissibility & Transparency Report for OpenGAP / Agent Passport**  
+> *Agent Name:* AetherSphere 3D (`aethersphere-3d`)  
+> *Specification:* OpenGAP v0.1.0  
+> *Domain:* Developer Tools / 3D Graphics & Spatial Computing  
 
 ---
 
-## How your agent operates
+## 1. Overview & Architectural Purpose
 
-### Operational Purpose & Architecture
-`aethersphere-3d` is an autonomous spatial computing and procedural 3D graphics agent. Its primary objective is to design, calibrate, and orchestrate interactive, multi-dimensional WebGL 2.0 and Three.js environments with real-time procedural audio synthesis, operating completely without dependency on heavy external 3D assets.
+AetherSphere 3D is an autonomous spatial computing, procedural 3D multiverse architect, and WebGL shader synthesis agent. Its purpose is to transcend conventional 2D flat web design by procedurally generating, calibrating, and orchestrating interactive 3D WebGL 2.0 / Three.js environments, dynamic camera flight physics, and real-time spatial audio synthesis without reliance on heavy static 3D model files.
 
-### Decision-Making Workflow & Execution Pipeline
-The agent operates via a deterministic, multi-stage cognitive and execution pipeline:
+AetherSphere 3D parses user directives and environmental constraints, computes deterministic mathematical manifolds (Fibonacci celestial swarms, parametric non-Euclidean torus knots, Dyson structures), compiles custom GLSL fragment and vertex shaders, harmonizes spatial audio frequencies, and continuously monitors runtime GPU telemetry to maintain an unwavering 60 FPS performance budget.
+
+---
+
+## 2. How the Agent Decides (Decision-Making Logic)
+
+AetherSphere 3D operates across a deterministic, multi-stage decision pipeline:
 
 ```
-[User Directive / Prompt] 
-          │
-          ▼
-[Perception & Intent Parsing] ──► [Rule & Duty Validation (RULES.md / DUTIES.md)]
-                                                │
-                                                ▼
-[Spatial Audio Harmonization] ◄── [Procedural Geometry & Shader Synthesis]
-          │
-          ▼
-[Continuous Telemetry & Optimization Loop (60 FPS / Draw Call Guardrails)]
+[User Directive / Realm Request] ──> [Perception & Shader Grammar Parsing] ──> [Complexity & Resource Analysis]
+                                                                                            │
+                                                                                            ▼
+[Spatial Audio & Telemetry Loop] <── [GPU Buffer & Material Compilation] <── [Procedural Geometry Synthesis]
 ```
 
-1. **Perception & Intent Parsing**:
-   - Ingests natural language directives or structured configurations requesting realm transitions, lighting adjustments, camera trajectories, or shader mutations.
-   - Evaluates client device hardware capabilities, GPU tier, available WebGL extensions, and display refresh rate.
+### 2.1 Scene Parameter & Aesthetic Interpretation
+- **Decision:** Determines geometric topology, lighting presets, color palettes, and cinematic camera waypoints based on requested realm archetypes (`cyberpunk`, `celestial`, `abyss`, `kinetic`, `solaris`).
+- **Model:** Leverages Claude 3.7 Sonnet and GPT-4o with structured JSON schema enforcement (`tools/realm-configurator.yaml`) to output strictly validated, executable configuration objects.
 
-2. **Rule & Governance Verification**:
-   - Cross-checks requested actions against hard boundaries in `RULES.md` (e.g., maximum draw call limits $< 150$, instancing caps $< 50,000$).
-   - Enforces segregation of duties defined in `DUTIES.md` across `architect`, `renderer`, and `auditor` roles.
+### 2.2 Algorithmic Geometry & Manifold Synthesis
+- **Decision:** Selects and evaluates mathematical formulations for spatial distribution, preventing static asset asset bloat and long download times.
+- **Rules:**
+  - Utilize spherical Fibonacci lattices for uniform celestial starfields and orbital Dyson collectors: $y_i = 1 - \frac{2i}{N-1}, \quad r_i = \sqrt{1 - y_i^2}, \quad \theta_i = 2\pi i \cdot \phi^{-1}$.
+  - Compute parametric $(p,q)$-torus curves for kinetic non-Euclidean structures: $x(\phi) = (\cos(q\phi)+2)\cos(p\phi)$.
+  - Mandate `THREE.InstancedMesh` for any repeated geometric element exceeding 50 units to consolidate GPU draw calls into a single invocation.
 
-3. **Procedural Geometry & Shader Generation**:
-   - Synthesizes mathematical parametric structures (Fibonacci golden-spiral celestial distributions, non-Euclidean torus knots, Dyson megastructure orbits).
-   - Generates and compiles GLSL fragment and vertex shaders for real-time volumetric plasma, bioluminescent caustics, and stellar flares.
-   - Uses `THREE.InstancedMesh` to batch repetitive geometric primitives into single GPU draw calls.
+### 2.3 Audio-Visual Frequency Harmonization
+- **Decision:** Dynamically binds visual movement, particle speed, and shader wave distortion to Web Audio procedural synthesis parameters.
+- **Rationale:** Ensures auditory feedback directly matches visual dynamics; flight velocity exponentially scales oscillator frequencies ($f(v) = f_{\text{base}} \cdot 2^{\frac{v - v_{\text{min}}}{v_{\text{max}} - v_{\text{min}}} \cdot n_{\text{octaves}}}$) while camera position drives 3D spatial panning.
 
-4. **Spatial Audio Synchronization**:
-   - Harmonizes visual particle velocity, light intensity, and mesh oscillations with Web Audio synthesizer nodes.
-   - Dynamically modulates oscillator wave types, biquad filter cutoffs, and spatial panner positions in 3D space.
-
-5. **Telemetry & Self-Optimization**:
-   - Continuously audits real-time metrics (frames per second, frame delta time, active geometries, triangle count, draw calls).
-   - Automatically throttles particle density or adjusts Level of Detail (LOD) if frame rate falls below 55 FPS.
+### 2.4 Resource Budgeting & Autonomous Optimization
+- **Decision:** Evaluates real-time telemetry (FPS, frame render delta in milliseconds, triangle count, and draw call volume) against predefined guardrail thresholds.
+- **Feedback:** If frame rates drop below 55 FPS or draw calls exceed 150, the agent automatically downscales particle densities, activates level-of-detail (LOD) downgrades, and triggers garbage collection.
 
 ---
 
-## The data it uses
+## 3. Data Sources & Inputs Used
 
-### Data Sources & Input Ingestion
-The agent consumes clearly defined, transparent data streams:
-- **User Directives**: Natural language prompts, creative design instructions, or explicit parameter adjustments.
-- **Hardware & Environment Telemetry**: Real-time browser capabilities, WebGL 2.0 context parameters, GPU vendor identification, screen aspect ratio, device pixel ratio, and Web Audio context state.
-- **Declarative Configuration State**: Version-controlled JSON and YAML schemas defining realm metadata, camera waypoints, color palettes, and lighting presets.
+| Data Input | Source | Purpose | Data Handling & Privacy |
+|---|---|---|---|
+| **User Directives** | Natural language prompts / UI controls | Defines target realm, camera speed, bloom, distortion, and aesthetic profile | Processed ephemerally in memory; not stored externally or used for retraining |
+| **Hardware & GPU Telemetry** | Browser WebGL context (`WEBGL_debug_renderer_info`) | Adapts particle counts, float texture precision, and shader complexity to client hardware | Inspected client-side only; zero telemetry transmitted off-device |
+| **Realm & World Settings** | Git-native configuration files (`src/types.ts`, `agent.yaml`) | Parameterizes rendering uniforms, waypoints, and physics constants | Version-controlled in public git repository; completely reproducible |
+| **Runtime Performance Metrics** | Three.js internal renderer statistics | Tracks instantaneous FPS, triangle count, and draw calls per frame | Real-time monitoring loop in volatile client memory; zero PII logged |
 
-### Knowledge & Foundational Data
-- **Algorithmic Mathematics**: Pre-programmed mathematical formulas for spherical Fibonacci lattices, parametric torus knots, fractal noise functions, and geometric transformations.
-- **Specification Schemas**: OpenGAP v0.1.0 specifications (`agent.yaml`, `tools/realm-configurator.yaml`, `skills/procedural-generation/SKILL.md`).
-- **Foundational LLM Weights**: Utilizes pretrained frontier models (Claude 3.7 Sonnet, GPT-4o) with strict system prompt boundaries defined in `SOUL.md`.
-
-### Data Storage & Persistence Model
-- **Git-Native Persistence**: The agent does not rely on opaque third-party databases. All persistent configurations, realm lore, and procedural presets are stored and versioned directly within the GitHub repository.
-- **Ephemeral Session Memory**: Real-time rendering matrices, audio node buffers, and WebGL uniform values reside exclusively in volatile memory (RAM/VRAM) during an active browser session and are discarded upon termination.
-
-### Data Privacy & Governance
-- **Zero Personally Identifiable Information (PII)**: The agent collects, processes, and stores zero personal data, credentials, user tracking cookies, or browsing histories.
-- **Client-Side Execution**: All mathematical calculations, procedural generation loops, and shader renderings are executed locally on the client's device, ensuring complete privacy.
+AetherSphere 3D complies with privacy-by-design standards:
+- **No PII collection:** No usernames, IP addresses, browsing histories, or personal identifiers are ever collected, parsed, or transmitted.
+- **Stateless execution:** Procedural generation and WebGL rendering occur entirely client-side in the browser's isolated JavaScript sandbox.
 
 ---
 
-## Its limitations
+## 4. Known Limitations & Failure Modes
 
-### Technical & Environmental Constraints
-- **Hardware Dependency**: The agent requires a WebGL 2.0-compliant graphics context (OpenGL ES 3.0 equivalent). Devices with legacy or integrated GPUs without hardware float texture support will experience degraded visual fidelity or reduced particle counts.
-- **Browser Autoplay Security Policies**: Modern web browsers enforce strict security restrictions prohibiting autonomous audio playback without a prior user gesture. The agent cannot initiate audio synthesis until an explicit user interaction occurs.
-- **Performance Ceilings**: To maintain a consistent 60 FPS experience, total scene complexity is strictly constrained: maximum 50,000 instanced particles, maximum 150 draw calls per frame, and maximum 500,000 rendered triangles.
+Reviewers and engineers should be aware of the following system boundaries:
 
-### Scope & Functional Boundaries
-- **No External Network Execution**: The agent cannot make arbitrary outbound network requests, access private file systems outside the repository workspace, or execute arbitrary system shell commands.
-- **Strictly Graphics & Spatial Audio Domain**: The agent is engineered specifically for procedural 3D scene construction, shader development, and real-time audio-visual synthesis; it is not designed for generalized administrative or database management tasks.
+1. **WebGL 2.0 Hardware Compatibility:**
+   - *Limitation:* Devices lacking WebGL 2.0 (OpenGL ES 3.0 support) or hardware float texture support cannot execute custom volumetric fragment shaders.
+   - *Mitigation:* The agent detects unsupported WebGL capabilities during context initialization and gracefully falls back to basic unlit materials and standard Three.js mesh primitives.
 
-### Failure Modes & Graceful Degradation
-- **WebGL Context Loss**: If the host operating system or GPU driver terminates the WebGL context, the agent catches the context loss event, halts rendering loops, releases GPU resource handles, and attempts automatic recovery without crashing the host application.
-- **Input Parameter Out-of-Bounds**: Any requested parameter outside defined safe operational bounds (e.g., flight speed $> 35\text{ m/s}$, bloom intensity $> 3.0$, or invalid realm identifiers) is automatically clamped to safe threshold values specified in `tools/realm-configurator.yaml`.
-- **API Disconnection & Rate Limits**: If external model API calls fail or experience rate limits, the agent falls back seamlessly to local procedural presets and default shader templates without interrupting active scene navigation.
+2. **Browser Autoplay Security Constraints:**
+   - *Limitation:* Web browsers strictly block procedural Web Audio generation until a physical user interaction (click or keypress) occurs.
+   - *Mitigation:* Audio contexts initialize in a `'suspended'` state; visual rendering proceeds immediately at 60 FPS while audio smoothly fades in upon the user's first input interaction.
+
+3. **GPU Thermal & Instancing Ceilings:**
+   - *Limitation:* On lower-end mobile devices, extreme particle counts ($> 50,000$) can induce GPU thermal throttling and frame drops.
+   - *Mitigation:* Hard constraints in `RULES.md` clamp particle density at 50,000 maximum and cap draw calls at 150, automatically reducing resolution scale on high-DPI mobile screens.
+
+4. **WebGL Context Loss & VRAM Leaks:**
+   - *Limitation:* Rapidly switching between complex 3D environments without explicit memory disposal will trigger browser WebGL context termination.
+   - *Mitigation:* The agent mandates explicit `.dispose()` calls on all geometries, textures, and custom shader materials during every realm transition, supplemented by an automated `webglcontextlost` recovery listener.
+
+---
+
+## 5. Verification, Safety & Human Oversight
+
+- **Real-Time Telemetry HUD:** Users and developers can continuously inspect live rendering telemetry (FPS, frame duration in ms, geometry count, triangle count, draw calls) displayed in the active HUD overlay.
+- **Segregation of Duties (SOD):** Critical operations adhere to `DUTIES.md` role boundaries (`architect`, `renderer`, `auditor`), preventing unvetted scene mutations from bypassing performance auditing.
+- **Git-Native Auditability:** Every configuration schema, shader routine, and skill definition is tracked via git commits, ensuring deterministic replayability and comprehensive peer review through standard pull requests.
